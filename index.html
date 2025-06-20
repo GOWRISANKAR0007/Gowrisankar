@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Gowrisankar E - Resume</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -313,6 +313,24 @@
             background: var(--secondary-color);
         }
 
+        /* Technical Skills List */
+        .tech-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-skill-item {
+            background: var(--bg-light);
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .main-content {
@@ -386,7 +404,7 @@
         <div class="main-content">
             <aside class="sidebar">
                 <div class="section reveal">
-                    <h2><i class="fas fa-code"></i> Skills</h2>
+                    <h2><i class="fas fa-code"></i> Technical Skills</h2>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Power BI</span>
@@ -435,43 +453,33 @@
                 </div>
 
                 <div class="section reveal">
-                    <h2><i class="fas fa-language"></i> Languages</h2>
-                    <div class="language-item">
-                        <span>English</span>
-                        <div class="language-level">
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                        </div>
+                    <h2><i class="fas fa-tools"></i> Other Skills</h2>
+                    <div class="tech-skills">
+                        <div class="tech-skill-item">OS Installation</div>
+                        <div class="tech-skill-item">Linux</div>
+                        <div class="tech-skill-item">Windows</div>
+                        <div class="tech-skill-item">Troubleshooting</div>
+                        <div class="tech-skill-item">Domain Management</div>
+                        <div class="tech-skill-item">Hosting</div>
                     </div>
-                    <div class="language-item">
-                        <span>Spanish</span>
-                        <div class="language-level">
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot"></div>
-                        </div>
+                </div>
+
+                <div class="section reveal">
+                    <h2><i class="fas fa-certificate"></i> Certifications</h2>
+                    <div class="timeline-item">
+                        <h4>Excel Certification</h4>
+                        <div class="company">Simple Learn</div>
                     </div>
-                    <div class="language-item">
-                        <span>French</span>
-                        <div class="language-level">
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot active"></div>
-                            <div class="level-dot"></div>
-                            <div class="level-dot"></div>
-                        </div>
+                    <div class="timeline-item">
+                        <h4>DBMS</h4>
+                        <div class="company">NPTEL</div>
                     </div>
                 </div>
             </aside>
 
             <main class="content">
                 <div class="section reveal">
-                    <h2><i class="fas fa-user-circle"></i> Career Objective</h2>
+                    <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
                     <p>Seeking an entry-level position in a dynamic organization where I can effectively apply my skills. I aim to enhance my knowledge through continuous learning and hands-on experience, while contributing to the company's growth and developing my professional capabilities.</p>
                 </div>
 
@@ -481,27 +489,13 @@
                         <h3>Master of Computer Applications (MCA)</h3>
                         <div class="date">2023 - 2025</div>
                         <div class="company">Dr. M.G.R. Educational And Research Institute</div>
-                        <p>Currently pursuing MCA with focus on advanced computing technologies and software development.</p>
+                        <p>Currently pursuing MCA with focus on advanced computing technologies, data analysis, and software development methodologies.</p>
                     </div>
                     <div class="timeline-item">
                         <h3>Bachelor of Computer Application (BCA)</h3>
                         <div class="date">2020 - 2023</div>
                         <div class="company">Jayagovind Harigopal Agarwal Agarsen College</div>
-                        <p>Graduated with strong foundation in computer applications, programming, and database management.</p>
-                    </div>
-                </div>
-
-                <div class="section reveal">
-                    <h2><i class="fas fa-certificate"></i> Certifications</h2>
-                    <div class="timeline-item">
-                        <h3>Excel Certification</h3>
-                        <div class="company">Simple Learn</div>
-                        <p>Comprehensive training in Microsoft Excel for data analysis and visualization.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Database Management Systems (DBMS)</h3>
-                        <div class="company">NPTEL</div>
-                        <p>Advanced concepts in database design, management, and optimization.</p>
+                        <p>Graduated with strong foundation in computer applications, programming languages, database management, and web technologies.</p>
                     </div>
                 </div>
 
@@ -510,24 +504,94 @@
                     <div class="project-grid">
                         <div class="project-card">
                             <h4><i class="fas fa-globe"></i> Lynix Business Solutions Website</h4>
-                            <p>Designed and published a comprehensive business website using WordPress with Astra theme and Elementor page builder. Developed service, about, and contact pages with professional layout and responsive design.</p>
+                            <p>Designed and published a comprehensive business website using WordPress with Astra theme and Elementor page builder. Developed service, about, and contact pages with professional layout and responsive design. Successfully managed domain hosting via InfinityHost.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">WordPress</span>
                                 <span class="tech-tag">Elementor</span>
                                 <span class="tech-tag">Astra Theme</span>
                                 <span class="tech-tag">Domain Management</span>
+                                <span class="tech-tag">Hosting</span>
                             </div>
-                            <p style="margin-top: 10px; font-weight: 600; color: var(--secondary-color);">Outcome: Gained real-world web development and deployment experience</p>
+                            <p style="margin-top: 15px; font-weight: 600; color: var(--secondary-color);"><i class="fas fa-trophy"></i> Outcome: Gained real-world web development and deployment experience</p>
                         </div>
                         <div class="project-card">
                             <h4><i class="fas fa-chart-bar"></i> Sales Dashboard - Power BI</h4>
-                            <p>Created an interactive sales dashboard featuring dynamic charts and filters to visualize sales performance by month, product, and region. Implemented slicers for real-time data filtering and analysis.</p>
+                            <p>Created an interactive sales dashboard featuring dynamic charts and filters to visualize sales performance by month, product, and region. Implemented slicers for real-time data filtering and comprehensive business analytics.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Power BI</span>
                                 <span class="tech-tag">Data Visualization</span>
                                 <span class="tech-tag">Dashboard Design</span>
-                                <span class="tech-tag">Analytics</span>
+                                <span class="tech-tag">Business Analytics</span>
+                                <span class="tech-tag">Interactive Filters</span>
                             </div>
-                            <p style="margin-top: 10px; font-weight: 600; color: var(--secondary-color);">Outcome: Built foundational data analysis and visualization skills</p>
+                            <p style="margin-top: 15px; font-weight: 600; color: var(--secondary-color);"><i class="fas fa-trophy"></i> Outcome: Built foundational data analysis and visualization skills</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="section reveal">
+                    <h2><i class="fas fa-target"></i> Core Competencies</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
+                            <i class="fas fa-chart-line" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                            <h4>Data Analysis</h4>
+                            <p style="font-size: 0.9em; color: var(--text-light);">Power BI, Excel, Dashboard Creation</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
+                            <i class="fas fa-globe" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                            <h4>Web Development</h4>
+                            <p style="font-size: 0.9em; color: var(--text-light);">WordPress, Domain Management</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
+                            <i class="fas fa-database" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                            <h4>Database Management</h4>
+                            <p style="font-size: 0.9em; color: var(--text-light);">DBMS, Data Modeling</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
+                            <i class="fas fa-laptop" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                            <h4>System Administration</h4>
+                            <p style="font-size: 0.9em; color: var(--text-light);">OS Installation, Troubleshooting</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', reveal);
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(reveal, 100);
+        });
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
