@@ -331,28 +331,236 @@
             color: var(--primary-color);
         }
 
+        /* Core Competencies Grid */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .competency-card {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .competency-icon {
+            font-size: 2em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .competency-card h4 {
+            margin-bottom: 5px;
+        }
+
+        .competency-card p {
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .main-content {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
 
+            .sidebar {
+                position: static;
+                order: 2;
+            }
+
+            .content {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 40px 0;
+            }
+
             .header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
+            }
+
+            .header p {
+                font-size: 1.1em;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 50px;
             }
 
             .contact-info {
+                gap: 20px;
                 flex-direction: column;
-                gap: 15px;
+                align-items: center;
+            }
+
+            .contact-item {
+                font-size: 0.9em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .sidebar, .content {
+                padding: 20px;
+                border-radius: 10px;
             }
 
             .project-grid {
                 grid-template-columns: 1fr;
             }
 
+            .project-card {
+                padding: 15px;
+            }
+
+            .tech-skills {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 8px;
+            }
+
+            .tech-skill-item {
+                padding: 6px 8px;
+                font-size: 0.8em;
+            }
+
+            .competencies-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+            }
+
+            .competency-card {
+                padding: 12px;
+            }
+
+            .competency-icon {
+                font-size: 1.5em;
+            }
+
+            .timeline-item {
+                padding-left: 20px;
+            }
+
+            .timeline-item h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
             .container {
                 padding: 10px;
+            }
+
+            .header {
+                padding: 30px 0;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header p {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+
+            .contact-info {
+                gap: 15px;
+            }
+
+            .contact-item {
+                font-size: 0.85em;
+            }
+
+            .main-content {
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .sidebar, .content {
+                padding: 15px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+                margin-bottom: 15px;
+            }
+
+            .tech-skills {
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                gap: 6px;
+            }
+
+            .tech-skill-item {
+                padding: 5px 6px;
+                font-size: 0.75em;
+            }
+
+            .competencies-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .project-tech {
+                gap: 6px;
+            }
+
+            .tech-tag {
+                padding: 3px 8px;
+                font-size: 0.75em;
+            }
+
+            .timeline-item {
+                padding-left: 15px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .profile-img {
+                width: 80px;
+                height: 80px;
+                font-size: 30px;
+            }
+
+            .contact-item span {
+                font-size: 0.8em;
+            }
+
+            .section h2 {
+                font-size: 1.2em;
+            }
+
+            .tech-skills {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
             }
         }
 
@@ -366,6 +574,23 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .contact-item:hover,
+            .profile-img:hover,
+            .project-card:hover {
+                transform: none;
+            }
+
+            .contact-item:active {
+                transform: scale(0.95);
+            }
+
+            .project-card:active {
+                transform: scale(0.98);
+            }
         }
     </style>
 </head>
@@ -408,7 +633,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Power BI</span>
-                            <span>85%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
@@ -417,7 +641,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>MS Excel</span>
-                            <span>80%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
@@ -426,7 +649,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>WordPress</span>
-                            <span>75%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%"></div>
@@ -435,7 +657,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>DBMS</span>
-                            <span>70%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 70%"></div>
@@ -444,7 +665,6 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Canva Design</span>
-                            <span>75%</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%"></div>
@@ -531,26 +751,26 @@
 
                 <div class="section reveal">
                     <h2><i class="fas fa-target"></i> Core Competencies</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
-                            <i class="fas fa-chart-line" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                    <div class="competencies-grid">
+                        <div class="competency-card">
+                            <i class="fas fa-chart-line competency-icon"></i>
                             <h4>Data Analysis</h4>
-                            <p style="font-size: 0.9em; color: var(--text-light);">Power BI, Excel, Dashboard Creation</p>
+                            <p>Power BI, Excel, Dashboard Creation</p>
                         </div>
-                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
-                            <i class="fas fa-globe" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                        <div class="competency-card">
+                            <i class="fas fa-globe competency-icon"></i>
                             <h4>Web Development</h4>
-                            <p style="font-size: 0.9em; color: var(--text-light);">WordPress, Domain Management</p>
+                            <p>WordPress, Domain Management</p>
                         </div>
-                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
-                            <i class="fas fa-database" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                        <div class="competency-card">
+                            <i class="fas fa-database competency-icon"></i>
                             <h4>Database Management</h4>
-                            <p style="font-size: 0.9em; color: var(--text-light);">DBMS, Data Modeling</p>
+                            <p>DBMS, Data Modeling</p>
                         </div>
-                        <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; text-align: center;">
-                            <i class="fas fa-laptop" style="font-size: 2em; color: var(--secondary-color); margin-bottom: 10px;"></i>
+                        <div class="competency-card">
+                            <i class="fas fa-laptop competency-icon"></i>
                             <h4>System Administration</h4>
-                            <p style="font-size: 0.9em; color: var(--text-light);">OS Installation, Troubleshooting</p>
+                            <p>OS Installation, Troubleshooting</p>
                         </div>
                     </div>
                 </div>
@@ -587,11 +807,19 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
+
+        // Touch device detection and optimization
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+        }
     </script>
 </body>
 </html>
