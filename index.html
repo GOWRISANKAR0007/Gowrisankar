@@ -13,71 +13,97 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #ece9e6, #ffffff);
+      background: linear-gradient(to right, #f1f4f9, #fff);
       padding: 40px 20px;
       color: #333;
     }
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
       background: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
       animation: fadeIn 1.5s ease-in-out;
     }
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(30px); }
+      0% { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-    h1, h2 {
-      color: #1f2937;
-      margin-bottom: 15px;
-    }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 600;
+      color: #0d253f;
+      margin-bottom: 10px;
     }
     h2 {
-      margin-top: 30px;
-      border-left: 4px solid #007BFF;
-      padding-left: 10px;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      color: #007BFF;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #007BFF;
+      margin-top: 5px;
+      border-radius: 2px;
     }
     p, li {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
-    .contact a {
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .contact-info p, .contact-info a {
+      margin: 6px 0;
+      font-size: 1.05rem;
+    }
+    .contact-info a {
       color: #007BFF;
       text-decoration: none;
     }
-    ul {
-      padding-left: 20px;
-      margin-top: 10px;
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.4s; }
+    .section:nth-child(4) { animation-delay: 0.6s; }
+    .section:nth-child(5) { animation-delay: 0.8s; }
+    .section:nth-child(6) { animation-delay: 1s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .link-buttons {
+      text-align: center;
+      margin-top: 40px;
     }
     .link-buttons a {
       display: inline-block;
-      margin-top: 20px;
       background: #007BFF;
       color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
+      padding: 12px 20px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 14px rgba(0, 123, 255, 0.4);
       transition: background 0.3s ease;
     }
     .link-buttons a:hover {
       background: #0056b3;
-    }
-    .contact-info {
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-    .section {
-      animation: fadeIn 1s ease-in-out;
-      animation-delay: 0.2s;
-      animation-fill-mode: both;
     }
   </style>
 </head>
@@ -139,10 +165,9 @@
       </ul>
     </div>
 
-    <div class="section link-buttons">
+    <div class="link-buttons">
       <a href="Gowrisankar.pdf" download>📄 Download PDF</a>
     </div>
   </div>
 </body>
 </html>
-
