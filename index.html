@@ -1,173 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gowrisankar E – Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f1f4f9, #fff);
-      padding: 40px 20px;
-      color: #333;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: white;
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-      color: #0d253f;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      color: #007BFF;
-      position: relative;
-    }
-    h2::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: #007BFF;
-      margin-top: 5px;
-      border-radius: 2px;
-    }
-    p, li {
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-    ul {
-      margin-left: 20px;
-      margin-top: 10px;
-    }
-    .contact-info p, .contact-info a {
-      margin: 6px 0;
-      font-size: 1.05rem;
-    }
-    .contact-info a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
-    .section:nth-child(2) { animation-delay: 0.2s; }
-    .section:nth-child(3) { animation-delay: 0.4s; }
-    .section:nth-child(4) { animation-delay: 0.6s; }
-    .section:nth-child(5) { animation-delay: 0.8s; }
-    .section:nth-child(6) { animation-delay: 1s; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #ecf0f1;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-    .link-buttons {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .link-buttons a {
-      display: inline-block;
-      background: #007BFF;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 4px 14px rgba(0, 123, 255, 0.4);
-      transition: background 0.3s ease;
-    }
-    .link-buttons a:hover {
-      background: #0056b3;
-    }
-  </style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" /></radialGradient></defs><circle cx="20" cy="20" r="15" fill="url(%23grad1)"/><circle cx="80" cy="30" r="10" fill="url(%23grad1)"/><circle cx="60" cy="70" r="12" fill="url(%23grad1)"/></svg>') repeat;
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            margin: 0 auto 20px;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            animation: slideInUp 1s ease;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: slideInUp 1s ease 0.2s both;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease 0.4s both;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .sidebar {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .content {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* Skills */
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 10px;
+            transition: width 2s ease;
+            animation: skillLoad 2s ease;
+        }
+
+        @keyframes skillLoad {
+            from { width: 0; }
+        }
+
+        /* Experience & Education */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .company {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .project-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .language-level {
+            display: flex;
+            gap: 3px;
+        }
+
+        .level-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--bg-light);
+        }
+
+        .level-dot.active {
+            background: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Animation for scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Gowrisankar E</h1>
-    <div class="contact-info">
-      <p>📞 7845112481</p>
-      <p>📍 Madhavaram, Chennai – 600060</p>
-      <p>📧 <a href="mailto:e.gowrisankar2002@gmail.com">e.gowrisankar2002@gmail.com</a></p>
-      <p>🔗 <a href="https://linkedin.com/in/gowrisankar12" target="_blank">linkedin.com/in/gowrisankar12</a></p>
-      <p>🌐 <a href="https://lynix.wuaze.com/?i=1" target="_blank">lynix.wuaze.com</a></p>
-    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1>Gowrisankar E</h1>
+                <p>MCA Graduate & Aspiring Data Analyst</p>
+                <div class="contact-info">
+                    <a href="mailto:e.gowrisankar2002@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>e.gowrisankar2002@gmail.com</span>
+                    </a>
+                    <a href="tel:+917845112481" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 78451 12481</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Madhavaram, Chennai - 600060</span>
+                    </div>
+                    <a href="https://github.com/gowrisankar" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="section">
-      <h2>Career Objective</h2>
-      <p>
-        Highly motivated MCA graduate seeking an entry-level role in data analysis or web development. Eager to apply my hands-on experience with Power BI, WordPress, and system installation to deliver value and grow with a forward-thinking organization.
-      </p>
-    </div>
+    <div class="container">
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="section reveal">
+                    <h2><i class="fas fa-code"></i> Skills</h2>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Power BI</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MS Excel</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>WordPress</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>DBMS</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Canva Design</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Data Analysis:</strong> Power BI, MS Excel</li>
-        <li><strong>Web Development:</strong> WordPress, Elementor, Canva</li>
-        <li><strong>System & Hosting:</strong> OS Installation (Linux, Windows), Domain & Hosting Management</li>
-        <li><strong>Others:</strong> Basic Troubleshooting</li>
-      </ul>
-    </div>
+                <div class="section reveal">
+                    <h2><i class="fas fa-language"></i> Languages</h2>
+                    <div class="language-item">
+                        <span>English</span>
+                        <div class="language-level">
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <span>Spanish</span>
+                        <div class="language-level">
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <span>French</span>
+                        <div class="language-level">
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot active"></div>
+                            <div class="level-dot"></div>
+                            <div class="level-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
 
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Excel – Simplilearn (2023)</li>
-        <li>DBMS – NPTEL (2022)</li>
-      </ul>
-    </div>
+            <main class="content">
+                <div class="section reveal">
+                    <h2><i class="fas fa-user-circle"></i> Career Objective</h2>
+                    <p>Seeking an entry-level position in a dynamic organization where I can effectively apply my skills. I aim to enhance my knowledge through continuous learning and hands-on experience, while contributing to the company's growth and developing my professional capabilities.</p>
+                </div>
 
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MCA</strong>, Dr. M.G.R. Educational and Research Institute (2023 – 2025)</li>
-        <li><strong>BCA</strong>, Jayagovind Harigopal Agarwal Agarsen College (2020 – 2023)</li>
-      </ul>
-    </div>
+                <div class="section reveal">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="timeline-item">
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <div class="date">2023 - 2025</div>
+                        <div class="company">Dr. M.G.R. Educational And Research Institute</div>
+                        <p>Currently pursuing MCA with focus on advanced computing technologies and software development.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Bachelor of Computer Application (BCA)</h3>
+                        <div class="date">2020 - 2023</div>
+                        <div class="company">Jayagovind Harigopal Agarwal Agarsen College</div>
+                        <p>Graduated with strong foundation in computer applications, programming, and database management.</p>
+                    </div>
+                </div>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Lynix Business Solutions Website – WordPress</strong><br />
-          Developed a professional business website using Astra theme and Elementor. Managed domain & hosting via InfinityHost.
-        </li>
-        <li>
-          <strong>Sales Dashboard – Power BI</strong><br />
-          Built an interactive dashboard to analyze sales by product, region, and month using slicers and visual charts.
-        </li>
-      </ul>
-    </div>
+                <div class="section reveal">
+                    <h2><i class="fas fa-certificate"></i> Certifications</h2>
+                    <div class="timeline-item">
+                        <h3>Excel Certification</h3>
+                        <div class="company">Simple Learn</div>
+                        <p>Comprehensive training in Microsoft Excel for data analysis and visualization.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Database Management Systems (DBMS)</h3>
+                        <div class="company">NPTEL</div>
+                        <p>Advanced concepts in database design, management, and optimization.</p>
+                    </div>
+                </div>
 
-    <div class="link-buttons">
-      <a href="Gowrisankar.pdf" download>📄 Download PDF</a>
-    </div>
-  </div>
-</body>
-</html>
+                <div class="section reveal">
+                    <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h4><i class="fas fa-globe"></i> Lynix Business Solutions Website</h4>
+                            <p>Designed and published a comprehensive business website using WordPress with Astra theme and Elementor page builder. Developed service, about, and contact pages with professional layout and responsive design.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">Elementor</span>
+                                <span class="tech-tag">Astra Theme</span>
+                                <span class="tech-tag">Domain Management</span>
+                            </div>
+                            <p style="margin-top: 10px; font-weight: 600; color: var(--secondary-color);">Outcome: Gained real-world web development and deployment experience</p>
+                        </div>
+                        <div class="project-card">
+                            <h4><i class="fas fa-chart-bar"></i> Sales Dashboard - Power BI</h4>
+                            <p>Created an interactive sales dashboard featuring dynamic charts and filters to visualize sales performance by month, product, and region. Implemented slicers for real-time data filtering and analysis.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Dashboard Design</span>
+                                <span class="tech-tag">Analytics</span>
+                            </div>
+                            <p style="margin-top: 10px; font-weight: 600; color: var(--secondary-color);">Outcome: Built foundational data analysis and visualization skills</p>
+                        </div>
+                    </div>
